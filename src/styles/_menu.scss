@@ -1,0 +1,43 @@
+.dropdown-content{
+    display: none;
+    list-style: inherit;
+    transition: all .2s ease-in-out;
+    a:hover{
+        color: $base-orange;
+    }
+}
+
+.dropdown{
+    list-style: none;
+    background: transparent;
+    color: $base-white;
+    transition: all .2s ease-in-out;
+
+    :hover{
+        color: $base-darkOrange;
+    }
+}
+
+.dropdown:hover{
+    .dropdown-content{
+        display: block; 
+    }
+}
+
+.menu{
+    font-size: 22px;
+    position: sticky;
+    top:0;
+    max-width: 18%;
+    z-index: 2;
+    height: 0;
+}
+
+
+.active{
+    color: $base-darkOrange;
+
+    .dropdown-content{
+        display: block;
+    }
+}

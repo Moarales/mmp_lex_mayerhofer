@@ -1,0 +1,45 @@
+.headingBlock{
+    display: flex;
+    align-items: baseline;
+    min-height: 92px;
+    transition: all 1s ease-in-out;  
+    
+    box-shadow: 0px -5px 8px 0px rgba(0,0,0,0.4);
+    *{
+        margin: auto;
+        color: $base-black;
+        transition: all 1s ease-in-out;
+        padding-left: 7%;
+    }
+    &__first{
+        width: 60% !important;
+    }
+    p{
+        width: 20%;
+    }
+}
+#headings{
+    margin: 3% 0;
+}
+#Typo div:first-child{
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.4);
+}
+
+#Typo div:nth-child(even){
+    background-color: $base-lightOrange;
+    &:hover{
+        background-color: $base-grey;
+        *{
+            color: $base-lightOrange;
+        }
+    }
+}
+#Typo div:nth-child(odd){
+    background-color: $base-orange;
+    &:hover{
+        background-color: $base-grey;
+        *{
+            color: $base-orange;
+        }
+    }
+}

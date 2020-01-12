@@ -1,0 +1,176 @@
+<%=require('../src/partials/head.html')%>
+<%=require('../src/partials/navigation.html')%>
+<main>
+    <div class="grid">
+        <%=require('../src/partials/menu.html')%>
+        <section class="placeholder1"></section>
+        <section>
+            <h1>Brandguide</h1>
+            <div class="content" id="Intro">
+                <h2>Introduction</h2>
+                <p>Local.ly is a web service, that uses geodata and information from music services(like Spotify)
+                    provided by users, in order to create and display playlists based on the favourite music of multiple
+                    nearby users.</p>
+            </div>
+
+            <div class="content" id="Colors">
+                <h2>Colors</h2>
+                <p>The main colors are Orange, Black and White</p>
+
+                <p>Orange is used to emphatize Buttons and clickable Objects</p>
+
+                <p>For an orange Background you can either use black or white as text Color</p>
+
+                <div class="orangeBackground">
+                    <h3 class="orangeBackground__blackFont">Black</h3>
+                    <h3 class="orangeBackground__whiteFont">White</h3>
+                </div>
+
+                <h2>Colorpallet</h2>
+
+                <section class="colorPalett">
+                    <div class="colorPalett__box">
+                        <svg class="colorPalett__box--colorOrange" height="150" width="150">
+                            <circle cx="75" cy="75" r="70" stroke-width="3" />
+                        </svg>
+                        <div class="name">
+                            <p>Main</p>
+                            <p>Orange</p>
+                            <p>#FF5500</p>
+                        </div>
+                    </div>
+
+                    <div class="colorPalett__box">
+                        <svg class="colorPalett__box--colorlightOrange" height="150" width="150">
+                            <circle cx="75" cy="75" r="70" stroke-width="3" />
+                        </svg>
+                        <div class="name">
+                            <p>Monochromatic</p>
+                            <p>Light-Orange</p>
+                            <p>#FF9100</p>
+                        </div>
+                    </div>
+
+                    <div class="colorPalett__box">
+                        <svg class="colorPalett__box--colorBlack" height="150" width="150">
+                            <circle cx="75" cy="75" r="70" stroke-width="3" />
+                        </svg>
+                        <div class="name">
+                            <p>Contrast</p>
+                            <p>Black</p>
+                            <p>#0D0D0D</p>
+                        </div>
+                    </div>
+                    <div class="colorPalett__box">
+                        <svg class="colorPalett__box--colorWhite" height="150" width="150">
+                            <circle cx="75" cy="75" r="70" stroke="black" stroke-width="3" />
+                        </svg>
+                        <div class="name">
+                            <p>Complementary</p>
+                            <p>White</p>
+                            <p>#FDFDFD</p>
+                        </div>
+                    </div>
+                    <div class="colorPalett__box">
+                        <svg class="colorPalett__box--colorDarkOrange" height="150" width="150">
+                            <circle cx="75" cy="75" r="70" stroke-width="3" />
+                        </svg>
+                        <div class="name">
+                            <p>Footer</p>
+                            <p>Dark-Orange</p>
+                            <p>#D74B05</p>
+                        </div>
+                    </div>
+                    <div class="colorPalett__box">
+                        <svg class="colorPalett__box--colorGrey" height="150" width="150">
+                            <circle cx="75" cy="75" r="70" stroke-width="3" />
+                        </svg>
+                        <div class="name">
+                            <p>Secondary</p>
+                            <p>Grey</p>
+                            <p>#211E1E</p>
+                        </div>
+                    </div>
+
+
+
+                </section>
+
+            </div>
+
+            <div class="content" id="Logo">
+
+                <h2>Logo</h2>
+                <p>The color of the logo mustn't be altered in any way. Change the Background to make it visible in
+                    every appearance. The logo is never seperate from our brandname. The Brandname always uses Quantico
+                    as fontstyle.</p>
+
+                <article class="logoContainer">
+
+
+                    <img class="logoContainer__logoSVG" src="../src/images/Local_ly_icon.svg" alt="Logo von Local.LY">
+                    <p>Do not alter the dimensions of the Logo.</p>
+
+                    <h3>Favicon</h3>
+
+
+                    <img class="logoContainer_faviconSVG" src="../src/images/favicon.svg"
+                        alt="Favicon von Local.LY">
+
+
+
+                    <div class="showcase">
+                        <a class="logoContainer__downloadButton btn" href="../src/images/Local_ly_icon.svg"
+                        download="logo.svg">Download the Logo (SVG)
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="content" id="Typo">
+                <h2>Typography</h2>
+                <p>Quantico is used for all text elements to create a uniform design experience.</p>
+                <h3>About</h3>
+                <p>Quantico is an angular typeface family that was inspired by old beer packaging and military
+                    lettering. It utilizes 30-degree angles and completely straight lines to form unique character
+                    shapes.</p>
+                <section id="headings">
+                    <div class="headingBlock">
+                        <h1 class="headingBlock__first">Heading 1</h1>
+                        <p>64px</p>
+                        <p>4rem</p>
+                    </div>
+                    <div class="headingBlock">
+                        <h2 class="headingBlock__first">Heading 2</h2>
+                        <p>40px</p>
+                        <p>2.5rem</p>
+                    </div>
+                    <div class="headingBlock">
+                        <h3 class="headingBlock__first">Heading 3</h3>
+                        <p>32px</p>
+                        <p>2rem</p>
+                    </div>
+                    <div class="headingBlock">
+                        <h4 class="headingBlock__first">Heading 4</h4>
+                        <p>20px</p>
+                        <p>1.25rem</p>
+                    </div>
+                    <div class="headingBlock">
+                        <p class="headingBlock__first">Paragraph</p>
+                        <p>18px</p>
+                        <p>1.1125rem</p>
+                    </div>
+                    <div class="headingBlock"><small class="headingBlock__first">Small</small>
+                        <p>14px</p>
+                        <p>0.875rem</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="placeholder"></section>
+
+    </div>
+</main>
+
+<%=require('../src/partials/footer.html')%>

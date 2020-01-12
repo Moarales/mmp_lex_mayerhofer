@@ -1,0 +1,592 @@
+<%=require('../src/partials/head.html')%>
+<%=require('../src/partials/navigation.html')%>
+<main>
+    <div class="grid">
+        <%=require('../src/partials/menu.html')%>
+        <section class="placeholder1"></section>
+        <section id="ui_elements">
+            <h1>UI-Elements</h1>
+            <div class="content" id="Buttons">
+                <h2>Buttons</h2>
+                <h3>Primary Button</h3>
+                <p>This button should be used as default whenever there is something to confirm, or for a more specific
+                    interaction, like connecting the Spotify account or returning from the playlist view.</p>
+                <div class="showcase">
+                    <button class="btn">button</button>
+                </div>
+                <div class="samples">
+                    <h4>HTML</h4>
+                    <pre><code class="language-markup">
+                        &lt;button class="btn">button&lt;/button>
+                    </code></pre>
+                    <h4>CSS(SCSS)</h4>
+                    <pre><code class="language-css">
+                        .btn{
+                            color: inherit;
+                            background-color: $color-orange;
+                            border: 0.1rem solid $color-orange;
+                            border-radius: 1.7rem;
+                            padding: .5rem 2.8rem;
+                            cursor: pointer;
+                            transition: all .2s ease-in-out;
+                            font-family: inherit;
+                            font-size: 17pt;
+                            
+                            &:hover{
+                                color: $color-orange;
+                                background-color: transparent;
+                            }
+                        }
+                    </code></pre>
+                </div>
+                <h3>Secondary button</h3>
+                <p>This button is only for forms, where the user has multiple submit actions.</p>
+                <div class="showcase">
+                    <button class=" btn btn--second">another button</button>
+                </div>
+                <div class="samples">
+                    <h4>HTML</h4>
+                    <pre><code class="language-markup">
+                        &lt;button class="btn--second">another button&lt;/button>
+                    </code></pre>
+                    <h4>CSS(SCSS)</h4>
+                    <pre><code class="language-css">
+                        .btn{
+                            color: inherit;
+                            background-color: $base-orange;
+                            border: 0.1rem solid $base-orange;
+                            border-radius: 1.7rem;
+                            padding: .5rem 2.8rem;
+                            cursor: pointer;
+                            transition: all .2s ease-in-out;
+                            font-family: inherit;
+                            font-size: 17pt;
+                            
+                            &:hover{
+                                color: $base-orange;
+                                background-color: transparent;
+                            }
+                        
+                            &--second{
+                              background-color: $base-buttonSecond;
+                              border: 0.1rem solid $base-buttonSecond;
+                              
+                              &:hover{
+                                color: $base-buttonSecond;
+                              }
+                          }
+                            
+                        }
+                    </code></pre>
+                </div>
+                <p>We recommend using the buttons on a dark background. </p>
+            </div>
+            <div class="content" id="Header">
+                <h2>Header</h2>
+
+                <p>The Header contains our Logo and provides links to our main sites, it also includes the navigation
+                    burger menu</p>
+
+
+                <div class="headElement">
+
+                    <img src="../src/images/Local_ly_icon.svg" alt="Local_ly_icon Icon">
+                    <div class=headElement__Links>
+                        <a href="#">Home</a>
+                        <a href="#">Playlist</a>
+                    </div>
+                    <div class="headElement__menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                </div>
+
+                <div class="samples">
+                    <h4>HTML</h4>
+                    <pre>
+                        <code class="language-markup">               
+                &lt;header>
+                    &lt;img src="../src/images/Local_ly_icon.svg" alt="Local_ly_icon Icon">
+                    &lt;div class=headElement__Links>
+                        &lt;a href="#">Home&lt;/a>
+                        &lt;a href="#">Playlist&lt;/a>
+                    &lt;/div>
+                    &lt;div class="headElement__menuToggle">
+                        &lt;span>&lt;/span>
+                        &lt;span>&lt;/span>
+                        &lt;span>&lt;/span>
+                    &lt;/div>
+                &lt;/header>     
+                    </code>
+                </pre>
+                </div>
+
+                <h4>CSS(SCSS)</h4>
+                <pre><code class="language-css">
+                    .headElement {
+                        background-color: $base-black;
+                        display: flex;
+                        width: 100%;
+                        height: 5%;
+                        border-bottom: solid $base-orange;
+                        margin-top: 20px;
+                      
+                        .logoContainer__logoSVG {
+                          left: 0;
+                          position: absolute;
+                          margin-left: 1rem;
+                          margin-top: 0.8rem;
+                          width: 10%;
+                        }
+                        &__Links {
+                          color: $base-orange;
+                          margin-top: auto;
+                          margin-bottom: auto;
+                          font-size: 2rem;
+                          margin-left: 40px;
+                        }
+                      
+                        &__menuToggle {
+                          width: 5%;
+                          height: 40px;
+                          margin-top: auto;
+                          margin-bottom: auto;
+                          margin-left: auto;
+         
+                        }
+                      }
+                    }
+                      
+                </code></pre>
+
+
+
+            </div>
+            <div class="content" id="Menu">
+                <h2>Navigation</h2>
+                <p>The navigation consists of a hamburger menu that extends to a full screen navigation menu. It is
+                    designed that way, because there should be a little disappearance as possible between the mobile-
+                    and desktop version. This approach works on both sizes well, because it draws the attention to the
+                    navigation options. For an example see <a href="#">top right</a></p>
+
+                <div class="samples">
+                    <h4>HTML</h4>
+                    <pre><code class="language-markup">
+                        &lt;div id="menuToggle">
+    
+                            &lt;input type="checkbox" />
+                            &lt;span>&lt;/span>
+                            &lt;span>&lt;/span>
+                            &lt;span>&lt;/span>
+                            
+                            &lt;ul id="menu">
+                                &lt;li>&lt;a href="index.html">Brandguide&lt;/a>&lt;/li>
+                                &lt;li>&lt;a href="css_methodology.html">CSS Methodology&lt;/a>&lt;/li>
+                                &lt;li>&lt;a href="page_layouts.html">Page Layout&lt;/a>&lt;/li>
+                                &lt;li>&lt;a href="ui_elements.html">UI Elements&lt;/a>&lt;/li>&lt;li>
+                            &lt;/ul>
+                          &lt;/div>
+                    </code></pre>
+                    <h4>CSS(SCSS)</h4>
+                    <pre><code class="language-css">
+                      
+                        #menuToggle
+                        {
+                        display: block;
+                        position: fixed;
+                        top: 6%;
+                        left: 93vw;
+                        z-index: 3;
+                        text-align: center;
+                        }
+
+                        #menuToggle a
+                        {
+                        text-decoration: none;
+                        color: $base-grey;
+                        
+                        transition: all 1.5s ease;
+                        border: 0.3rem solid $base-orange;
+                        }
+
+                        #menuToggle a:hover
+                        {
+                        border-color: transparent transparent $base-grey transparent;
+                        }
+
+
+                        #menuToggle input
+                        {
+                        display: block;
+                        width: 40px;
+                        height: 32px;
+                        position: absolute;
+                        top: -7px;
+                        left: -7px;
+                        
+                        cursor: pointer;
+                        
+                        opacity: 0; 
+                        z-index: 2; 
+                        
+                        -webkit-touch-callout: none;
+                        }
+
+
+                        #menuToggle span
+                        {
+                        display: block;
+                        width: 33px;
+                        height: 4px;
+                        margin-bottom: 5px;
+                        position: relative;
+                        left:-2.8%;
+                        
+                        background: $base-orange;
+                        border-radius: 3px;
+                        
+                        z-index: 1;
+                        
+                        transform-origin: 4px 0px;
+                        
+                        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                                    opacity 0.55s ease;
+                        }
+
+                        #menuToggle span:first-child
+                        {
+                        transform-origin: 0% 0%;
+                        }
+
+                        #menuToggle span:nth-last-child(2)
+                        {
+                        transform-origin: 0% 100%;
+                        }
+
+                        #menuToggle input:checked ~ span
+                        {
+                        opacity: 1;
+                        transform: rotate(45deg) translate(-2px, -1px);
+                        background: $base-grey;
+                        }
+
+                        #menuToggle input:checked ~ span:nth-last-child(3)
+                        {
+                        opacity: 0;
+                        transform: rotate(0deg) scale(0.2, 0.2);
+                        }
+
+                        #menuToggle input:checked ~ span:nth-last-child(2)
+                        {
+                        transform: rotate(-45deg) translate(0, -1px);
+                        }
+
+                        #menu{
+                        position: absolute;
+                        width: 100vw;
+                        padding: 15vh 0;
+                        background: $base-orange;
+                        height: 100vh;
+                            list-style-type: none;
+                            -webkit-font-smoothing: antialiased;
+                        margin: -14.5vh 0 0 7vw;
+                        
+                        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                        }
+
+                        #menu li
+                        {
+                        margin: auto;
+                        padding: 10px 0;
+                        font-size: 40px;
+                        }
+
+
+                        #menuToggle input:checked ~ ul
+                        {
+                        transform: translate(-100%,0);
+                        }
+                    </code></pre>
+                </div>
+            </div>
+            <div class="content" id="Form">
+                <h2>Form Elements</h2>
+                <p>We chose a free, but still structured approach to forms. That’s why the forms consist of open input
+                    fields and round buttons (see Buttons), that are vertically aligned.</p>
+                <div class="showcase">
+                    <div class="forms">
+                        <h2>Das is a Form</h2>
+                        <label for="inputUsr" class="formlabel">Username</label>
+                        <input id="inputUsr" class="input" type="text" placeholder="Username">
+
+                        <label for="inputPw" class="formlabel">Password</label>
+                        <input id="inputPw" class="input" type="password" placeholder="Password">
+
+                        <div class="submitBtns">
+                            <input type="submit" class="btn" value="Login">
+                            <p>or</p>
+                            <input type="submit" class="btn btn--second" value="Create Account" formaction="/elsewhere">
+                        </div>
+                    </div>
+                </div>
+                <div class="samples">
+                    <h4>HTML</h4>
+                    <pre><code class="language-markup">
+                        &lt;div class="forms">
+                        &lt;h2>Das is a Form&lt;/h2>
+                        &lt;label for="inputUsr" class="formlabel">Username&lt;/label>
+                        &lt;input id="inputUsr" class="input" type="text"     placeholder="Username">
+                        
+                        &lt;label for="inputPw" class="formlabel">Password&lt;/label>
+                        &lt;input id="inputPw" class="input" type="password" placeholder="Password">
+                        
+                        &lt;div class="submitBtns">
+                        &lt;input type="submit" class="btn" value="Login">
+                        &lt;p>or&lt;/p>
+                        &lt;input type="submit" class="btn btn--second" value="Create Account" formaction="/elsewhere">
+                        &lt;/div>
+                        &lt;/div>
+                    </code></pre>
+                    <h4>CSS(SCSS)</h4>
+                    <pre><code class="language-css">
+                        .forms{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-around;
+                            padding: .5rem;
+                            .input{
+                              margin:.5rem;
+                            }
+                            p{
+                              margin:.1rem;
+                            }
+                            .submitBtns{
+                              margin-top: 1.5rem;
+                            }
+                          }
+                          
+                          
+                          .input{
+                            border: 2px solid $base-white;
+                            border-color: transparent transparent $base-white transparent;
+                            background: transparent;
+                            font-size: 14pt;
+                            color: $base-white;
+                            font-family: inherit;
+                          }
+                          
+                          .input::placeholder{
+                            font-style: italic;
+                            opacity: 0.4;
+                          }
+                          
+                          .formlabel{
+                            display: none;
+                          }
+                    </code></pre>
+                </div>
+            </div>
+
+
+            <div class="content linkContainer" id="Links">
+                <h2>Links</h2>
+
+                <p>Links are written with our orange color and in bold. Background is either white or black</p>
+                <p>When hovered over, the link has to be underlined. You can use any transformation you want, but keep
+                    them consistent on your site.</p>
+
+
+                <div class="showcase linkContainer__linktag">
+                    <a href="#Links">Link</a>
+                    <a href="#Lists">Lists</a>
+                </div>
+
+                <div class="samples">
+                    <h4>CSS</h4>
+                    <pre>
+                        <code class="language-css">               
+                            a {
+                                color: #ff5500;
+                                font-weight: bold;
+                                transition: all 0.2s ease-in-out;
+                              }
+
+                              a:hover {
+                                border-bottom: solid #ff5500;
+                              }
+                            </code>
+                        </pre>
+                </div>
+            </div>
+
+
+            <div class="content listContainer" id="Lists">
+                <h2>Lists</h2>
+
+                <p>We use a list so showcase the songs in the current playlist. </p>
+
+
+
+                <div class="showcase playListContainer__playList">
+                    <ul>
+                        <li class="playListContainer__playList__songContainer">
+                            <img class="playListContainer__playList__songContainer__albumCover"
+                                src="../src/images/bspCover_1.jpg" alt="CoverImage">
+                            <div class="playListContainer__playList__songContainer__songDescription">
+                                <p class="playListContainer__playList__songContainer__songDescription__Titel">Titel</p>
+                                <p class="playListContainer__playList__songContainer__songDescription__Album">Album</p>
+                                <p class="playListContainer__playList__songContainer__songDescription__Artist">Artist
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="playListContainer__playList__songContainer">
+                            <img class="playListContainer__playList__songContainer__albumCover"
+                                src="../src/images/bspCover_2.jpg" alt="CoverImage">
+                            <div class="playListContainer__playList__songContainer__songDescription">
+                                <p class="playListContainer__playList__songContainer__songDescription__Titel">DJ Morph
+                                </p>
+                                <p class="playListContainer__playList__songContainer__songDescription__Album">Fh</p>
+                                <p class="playListContainer__playList__songContainer__songDescription__Artist">Hardsyle
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="playListContainer__playList__songContainer">
+                            <img class="playListContainer__playList__songContainer__albumCover"
+                                src="../src/images/bspCover_3.jpg" alt="CoverImage">
+                            <div class="playListContainer__playList__songContainer__songDescription">
+                                <p class="playListContainer__playList__songContainer__songDescription__Titel">So ne Musik</p>
+                                <p class="playListContainer__playList__songContainer__songDescription__Album">Luftbahn</p>
+                                <p class="playListContainer__playList__songContainer__songDescription__Artist">Seekind
+                                </p>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+
+
+                <div class="samples">
+                    <h4>HTML</h4>
+                    <pre>
+                        <code class="language-markup"> 
+
+&lt;div class="playListContainer__playList">
+    &lt;ul>
+        &lt;li class="playListContainer__playList__songContainer">
+            &lt;img class="playListContainer__playList__songContainer__albumCover"
+                src="../src/images/bspCover_1.jpg" alt="CoverImage">
+            &lt;div class="playListContainer__playList__songContainer__songDescription">
+                &lt;p class="playListContainer__playList__songContainer__songDescription__Titel">Titel&lt;/p>
+                &lt;p class="playListContainer__playList__songContainer__songDescription__Album">Album&lt;/p>
+                &lt;p class="playListContainer__playList__songContainer__songDescription__Artist">Artist
+                &lt;/p>
+            &lt;/div>
+        &lt;/li>
+
+        &lt;li class="playListContainer__playList__songContainer">
+            &lt;img class="playListContainer__playList__songContainer__albumCover"
+                src="../src/images/bspCover_2.jpg" alt="CoverImage">
+            &lt;div class="playListContainer__playList__songContainer__songDescription">
+                &lt;p class="playListContainer__playList__songContainer__songDescription__Titel">DJ Morph
+                &lt;/p>
+                &lt;p class="playListContainer__playList__songContainer__songDescription__Album">Fh&lt;/p>
+                &lt;p class="playListContainer__playList__songContainer__songDescription__Artist">Artist
+                &lt;/p>
+            &lt;/div>
+        &lt;/li>
+
+        &lt;li class="playListContainer__playList__songContainer">
+            &lt;img class="playListContainer__playList__songContainer__albumCover"
+                src="../src/images/bspCover_3.jpg" alt="CoverImage">
+            &lt;div class="playListContainer__playList__songContainer__songDescription">
+                &lt;p class="playListContainer__playList__songContainer__songDescription__Titel">Titel&lt;/p>
+                &lt;p class="playListContainer__playList__songContainer__songDescription__Album">Album&lt;/p>
+                &lt;p class="playListContainer__playList__songContainer__songDescription__Artist">Artist
+                &lt;/p>
+            &lt;/div>
+        &lt;/li>
+
+
+    &lt;/ul>
+&lt;/div>
+
+                        </code>
+                    </pre>
+                </div>
+
+
+
+                <div class="samples">
+                    <h4>SCSS</h4>
+                    <pre>
+                        <code class="language-css">               
+                            
+.playListContainer {
+    &__playList {
+      &__songContainer {
+        display: flex;
+        height: 150px;
+        margin-top: 20px;
+  
+  
+        &__albumCover{
+          margin-right:auto;
+          height:100%;
+        }
+
+        &__songDescription{
+          background:$base-black;
+          text-align: left;
+
+          margin-right: auto;
+          margin-left: 0.5rem;
+
+          width:80%;
+          height: 100%;
+
+          display: flex;
+          flex-direction: column;
+  
+          p{
+            margin-left: 1vw;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+          &__Titel{
+            font-size: 3vw;
+            color:$base-orange;
+          }
+          &__Album{
+            font-size: 1vw;
+          }
+  
+          &__Artist{
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+  }
+                            </code>
+                        </pre>
+                </div>
+            </div>
+
+
+
+        </section>
+        <section class="placeholder"></section>
+    </div>
+</main>
+
+<%=require('../src/partials/footer.html')%>

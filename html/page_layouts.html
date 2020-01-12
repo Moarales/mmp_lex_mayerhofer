@@ -1,0 +1,42 @@
+<%=require('../src/partials/head.html')%>
+<%=require('../src/partials/navigation.html')%>
+
+<main>
+    
+    <div class="grid">
+        <%=require('../src/partials/menu.html')%>
+        <section class="placeholder1"></section>
+        <section id="Layouts">
+            
+            <h1>Page Layout</h1>
+            <div class="content">
+            <p>Some page_layouts</p>
+            </div>
+            <section class="layout1 content" id="layout1">
+                <h2 class="layout1_heading">Login</h2>
+                <p class="layout1__paragraph">This layout is used to provide a form, where the user can connect his Spotify account with our app, and to simultaneously explain, why we need this information. By splitting the page vertically, we try to emphasize, that both parts are equally important.
+                </p>
+                <img class="layout1__picture" src="../src/images/Login_screen.png" alt="The Layout for the Login screen">
+            </section>
+
+
+            <section class="layout2 content" id="layout2">
+                <h2 class="layout2_heading">Stats</h2>
+                <p class="layout2__paragraph">To display additional information and statistics about currently played songs and playlists, we created this layout. The large, simple icons are positioned evenly to convey the information in an easy understandable way.
+                </p>
+                <img class="layout2__picture" src="../src/images/Stats_screen.png" alt="The Layout for the Stats screen">
+            </section>
+            <section class="layout3 content" id="layout3">
+                <h2 class="layout3_heading">Playlist</h2>
+                <p class="layout3__paragraph">This layout should be used to display the actual playlist. Because it’s supposed to overlay the previous screen, its background is darkened but also somewhat opaque. The songs are displayed in a centred list.
+                </p>
+                <img class="layout3__picture" src="../src/images/Playlist_screen.png" alt="The Layout for the Playlist screen">
+            </section>
+        </section>
+        <section class="placeholder"></section>
+    </div>
+
+</main>
+
+
+<%=require('../src/partials/footer.html')%>

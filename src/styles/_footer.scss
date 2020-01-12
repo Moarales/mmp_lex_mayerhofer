@@ -1,0 +1,20 @@
+footer {
+  background: $base-darkOrange;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  h2 {
+    margin-top: 0;
+    padding-top: 20px;
+    margin-right: 10px;
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 1016px) {
+  footer {
+    h2{
+      font-size:20px;
+    }
+  }
+}

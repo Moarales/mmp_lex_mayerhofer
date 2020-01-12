@@ -1,0 +1,65 @@
+.btn{
+    color: inherit;
+    background-color: $base-orange;
+    border: 0.1rem solid $base-orange;
+    border-radius: 1.7rem;
+    padding: .5rem 2.8rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-family: inherit;
+    font-size: 17pt;
+    
+    &:hover{
+        color: $base-orange;
+        background-color: transparent;
+    }
+
+    &--second{
+      background-color: $base-buttonSecond;
+      border: 0.1rem solid $base-buttonSecond;
+      
+      &:hover{
+        color: $base-buttonSecond;
+      }
+  }
+    
+}
+
+
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: .5rem;
+    .input{
+      margin:.5rem;
+    }
+    p{
+      margin:.1rem;
+    }
+    .submitBtns{
+      margin-top: 1.5rem;
+    }
+  }
+  
+  
+  .input{
+    border: 2px solid $base-white;
+    border-color: transparent transparent $base-white transparent;
+    background: transparent;
+    font-size: 14pt;
+    color: $base-white;
+    font-family: inherit;
+  }
+  
+  .input::placeholder{
+    font-style: italic;
+    opacity: 0.4;
+  }
+  
+  .formlabel{
+    display: none;
+  }
+                    

@@ -1,0 +1,103 @@
+<%=require('../src/partials/head.html')%>
+<%=require('../src/partials/navigation.html')%>
+
+<main>
+
+    <div class="grid">
+
+        <%=require('../src/partials/menu.html')%>
+        <section class="placeholder1"></section>
+        <section>
+            
+            <h1>CSS-Methodology</h1>
+            <div  class="content">
+            <p>Our main focus lies in using readable, maintainable and future proof CSS. Therefore we use <span
+                    class="highlight">SCSS</span> "SASSY CSS" and <span class="highlight">BEM</span> "Block Element
+                Modifier"
+                for our CSS.</p>
+            </div >
+            <section  id="BEM" class="bemBlock content">
+                <h2 class="bemBlock__heading">Class Naming Convention</h2>
+                <p class="bemBlock__paragraph">We use the Block Element Naming Conventions. Blocks are standalone
+                    entities.
+                    Every inseperable Element inside a Block is connected to the block name with a double underscore ( __
+                    ).
+                    Modifiers are used to change appearance, state or behaviour of a element.
+                    These Modifiers are connected with a double dash(--). Additional Modifiers are added with a single
+                    dash(-).
+                </p>
+
+                <p class="bemBlock__paragraph">Head over to <a class="bemBlock__paragraph link" href="http://getbem.com/naming/">getbem.com</a> for a more
+                            detailed convention</p>
+
+
+                
+                <pre><code class="language-css">
+                .block__element--modifier-modifier
+                .paragraph--strong
+                .navigation__logo
+                .footer__contactInformation--small
+                .video-player__TitleName</code></pre>
+
+
+            </section>
+
+
+            <section id="SCSS" class="scssBlock content">
+                <h2 class="scssBlock__heading">SCSS</h2>
+                <p class="scssBlock__paragraph">We use the the CSS Preprocessor "Sass".</p>
+                <p class="scssBlock__paragraph">Head over to <a class="scssBlock__paragraph link"href="https://sass-lang.com/">sass-lang</a> for more
+                            Information
+                </p>
+
+                <p>It can be used in various ways, main Target is to make our CSS files more Readable, especially while using
+                    BEM.
+                </p>
+
+
+                <pre><code class="language-css">
+                .block{
+                    &__head{
+                        &__playbutton{
+                            color:red;
+                        }
+                    }
+                }
+              
+            </code></pre>
+
+            </section>
+
+            <section id="Units" class="unitsblock content">
+                <h2>
+                    Units
+                </h2>
+                <ul>
+                  
+                    <li><span class="highlight">Font size</span> is set with pixels or rem.</li>
+                    <li><span class="highlight">Height</span> of an object is set with % or vh.</li>
+                    <li><span class="highlight">Width</span> of an object is set with % or vw.</li>
+
+                </ul>
+            </section>
+
+
+            <section  id="folder" class="folderstructure content">
+                <h2>
+                    Folder Structure
+                </h2>
+                    <p>Webpack is used to coordinate and and compile all of our assets. All HTML pages are stored in the HTML folder</p>
+                    <p>Reusable HTML files (head.html,footer.html,...) are stored in /src/partials.</p>
+                    <p>Images, SCSS and JS Files belong in their own folder in /src.</p>
+
+                <img src="../src/images/folderStructure.PNG" alt="Picture of folderstructure">
+
+            </section>
+        </section>
+        <section class="placeholder"></section>
+    </div>
+
+</main>
+
+
+<%=require('../src/partials/footer.html')%>
